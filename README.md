@@ -41,14 +41,14 @@ This Flask application allows users to verify RSS feed URLs and download the fee
 4. **View the result**: If the URL is valid, the feed information will be displayed, and you can download the JSON file by clicking the provided link. If the URL is invalid, an error message will be shown.
 
 ## Project Structure
-rss-feed-validator/
-│
-├── main.py # Main Flask application script
-├── requirements.txt # List of dependencies
-├── templates/
-│ ├── index.html # HTML template for the input form and error messages
-│ └── result.html # HTML template for displaying feed information and download link
-└── README.md # This file
+
+- rss-feed-validator/
+- main.py # Main Flask application script
+- requirements.txt # List of dependencies
+- templates/
+- index.html # HTML template for the input form and error messages
+- result.html # HTML template for displaying feed information and download link
+- README.md # This file
 
 
 ## License
