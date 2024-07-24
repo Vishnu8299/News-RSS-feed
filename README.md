@@ -12,7 +12,7 @@ This Flask application allows users to verify RSS feed URLs and download the fee
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/rss-feed-validator.git
+    git clone https://github.com/Vishnu8299/News-RSS-feed.git
     cd rss-feed-validator
     ```
 
