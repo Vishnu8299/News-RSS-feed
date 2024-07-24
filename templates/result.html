@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RSS Feed Information</title>
+</head>
+<body>
+    <h1>RSS Feed Information</h1>
+    <h2><strong>Feed Title:</strong> {{ feed_info['title'] }}</h2>
+    <p><strong>Feed Link:</strong> <a href="{{ feed_info['link'] }}">{{ feed_info['link'] }}</a></p>
+    <p><strong>Feed Description:</strong> {{ feed_info['description'] }}</p>
+    <p><strong>Total Entries:</strong> {{ feed_info['total_entries'] }}</p>
+    
+    <h3>Entries:</h3>
+    <ul>
+        {% for entry in feed_info['entries'] %}
+        <li>
+            <strong>Title:</strong> <a href="{{ entry['link'] }}">{{ entry['title'] }}</a><br>
+            <strong>Published:</strong> {{ entry['published'] }}<br>
+            <strong>Summary:</strong> {{ entry['summary'] }}<br>
+            {% if 'image' in entry %}
+            <img src="{{ entry['image'] }}" alt="Entry Image"><br>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{{ url_for('download_file', filename=file_name) }}">Download JSON file</a><br>
+    <a href="{{ url_for('index') }}">Back</a>
+</body>
+</html>
